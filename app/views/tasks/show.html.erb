@@ -1,0 +1,9 @@
+<h1><%= @task.title %></h1>
+<h2><%= @task.details %></h1>
+<% if @task.completed %>
+  <p><%= check_box_tag :completed, 'completed', @task.completed %>This task is completed</p>
+<% else %>
+  <p><%= check_box_tag :completed, 'completed', @task.completed %>This task is not yet complete</p>
+<% end %>
+
+<p><%= link_to 'Return to list of tasks', index_path %></p>
