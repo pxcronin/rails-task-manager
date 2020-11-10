@@ -4,7 +4,7 @@
     <li>
       <h3>
       <%= check_box_tag :completed, 'completed', task.completed %>
-      <%= link_to task.title, show_path(task.id) %>
+      <%= link_to task.title, task_path(task.id) %>
       </h3>
     </li>
   <% end %>
