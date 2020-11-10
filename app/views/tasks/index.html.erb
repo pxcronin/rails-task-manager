@@ -5,6 +5,10 @@
       <h3>
       <%= check_box_tag :completed, 'completed', task.completed %>
       <%= link_to task.title, task_path(task.id) %>
+      <%= link_to "🚮",
+                  task_path(task),
+                  method: :delete,
+                  data: { confirm: "Are you sure?"} %>
       </h3>
     </li>
   <% end %>

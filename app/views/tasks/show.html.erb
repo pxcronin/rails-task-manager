@@ -5,5 +5,9 @@
 <% else %>
   <p><%= check_box_tag :completed, 'completed', @task.completed %>This task is not yet complete</p>
 <% end %>
+<h2><%= link_to "Delete #{@task.title}",
+                  task_path(@task),
+                  method: :delete,
+                  data: { confirm: "Are you sure?"} %></h2>
 
 <p><%= link_to 'Return to list of tasks', index_path %></p>
